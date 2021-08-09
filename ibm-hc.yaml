@@ -28,7 +28,7 @@ cloud:
   # password values in the file for the on premise admin user and services
   # required for the ICOS Hybrid cloud. Enter the fully qualified path and
   # file name of that password file here.
-    password_file: YOUR_PASSWORD_FILE
+  password_file: YOUR_PASSWORD_FILE
   # Cloud Database Service Type: db2, mariadb or mysql
   database_service_type: db2
   # Cloud Messaging Service Type: rabbitmq or qpid
@@ -68,8 +68,8 @@ environment:
 
   override_attributes:
     # (Optional) Add Override Environment Attributes
-    ntp.servers: '[0.pool.ntp.org, 1.pool.ntp.org, 
-                  2.pool.ntp.org, 3.pool.ntp.org]'
+    ntp.servers: 
+      '[0.pool.ntp.org, 1.pool.ntp.org, 2.pool.ntp.org, 3.pool.ntp.org]'
 
 # ================================================================
 # Hybrid Cloud Information.
