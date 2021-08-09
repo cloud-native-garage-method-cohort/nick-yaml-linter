@@ -1,0 +1,1 @@
+# nick-yaml-linter
