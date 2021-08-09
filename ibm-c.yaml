@@ -1,6 +1,7 @@
 # =================================================================
 # Cloud Information
 # =================================================================
+---
 cloud:
   # Cloud Name: The cloud name must not contain spaces or special
   # characters. The name is used for the OpenStack region name.

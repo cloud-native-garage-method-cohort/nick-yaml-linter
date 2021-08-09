@@ -10,13 +10,14 @@
 # =================================================================
 # Cloud Information
 # =================================================================
+---
 cloud:
   # Cloud Name: The cloud name must not contain spaces or special
   # characters. The name is used for the OpenStack region name. The
   # default value for the ICOS Hybrid cloud is RegionTwo.
   name: RegionTwo
   # Cloud Description
-description: ICOS Hybrid - Controller + N Compute Topology - x86 KVM
+  description: ICOS Hybrid - Controller + N Compute Topology - x86 KVM
   # Cloud Administrator (admin) User's Password. For the ICOS Hybrid
   # cloud, the cloud administrator user's password is contained in the
   # password JSON file. It can be overridden here if needed.
@@ -43,7 +44,7 @@ description: ICOS Hybrid - Controller + N Compute Topology - x86 KVM
   # Cloud Features: The cloud features to be enabled or disabled. The
   # icos_hybrid_cloud, and fips_compliance features are enabled, by default. The
   # self_service_portal feature must be disabled for the ICOS Hybrid cloud.
-  features
+  features:
     self_service_portal: disabled
     platform_resource_scheduler: enabled
     icos_hybrid_cloud: enabled
@@ -67,7 +68,8 @@ environment:
 
   override_attributes:
     # (Optional) Add Override Environment Attributes
-    ntp.servers: [0.pool.ntp.org, 1.pool.ntp.org, 2.pool.ntp.org, 3.pool.ntp.org]
+    ntp.servers: '[0.pool.ntp.org, 1.pool.ntp.org, 
+                  2.pool.ntp.org, 3.pool.ntp.org]'
 
 # ================================================================
 # Hybrid Cloud Information.
@@ -89,7 +91,8 @@ hybrid:
   # on-premise region, and the ICOS system have trusted, commercially signed
   # SSL certificates. This value is ignored if the optional cacert_file value
   # is specified.
-  off_prem_certificate_chain_file: YOUR_OFF_PREM_CERTIFICATE_CHAIN_FILE_LOCAL_LOCATION
+  off_prem_certificate_chain_file: >
+     YOUR_OFF_PREM_CERTIFICATE_CHAIN_FILE_LOCAL_LOCATION
 
 # ================================================================
 # Node Information
